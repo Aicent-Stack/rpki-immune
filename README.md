@@ -30,7 +30,7 @@ RPKI embeds an **immutable, non-removable watermark** directly into every tensor
   where \( T \) is the tensor slice, and the result must match the expected Merkle root published in the RPKI DAG.
 - **Hijack detection**: If a downstream node alters even one token in a KV-delta, the watermark mismatch triggers instantly — no need to re-run the full model.
 
-This watermark travels with every RTTP Pulse Frame payload. The header’s `rpk_fingerprint` is just the public key; the real immunity lives inside the tensor itself.
+This watermark travels with every RTTP Pulse Frame payload. The header’s `rpki_fingerprint` is just the public key; the real immunity lives inside the tensor itself.
 
 ### 3. Parallel Immune Scans — Zero-Microsecond Verification on Every Pulse
 
@@ -52,7 +52,7 @@ When any scan fails, RPKI does **not** wait for a central controller. It immedia
 - **Structure**: Same PulseFrameHeader but with `flags |= 0b1000_0000` (quarantine bit) and a 16-byte `quarantine_reason` bitmap (e.g., “watermark_mismatch”, “hijack_detected”).
 - **Propagation**: Semantic multicast tree instantly floods the affected semantic affinity group. Every node that has ever routed to the offending fingerprint receives it in <300 µs (measured p99 on 400 Gbps fabric).
 - **Action on receipt**:
-  - Immediate blacklisting of the source `rpk_fingerprint` in local RPKI cache (TTL = 5 min, renewable only by brain override).
+  - Immediate blacklisting of the source `rpki_fingerprint` in local RPKI cache (TTL = 5 min, renewable only by brain override).
   - All pending ZCMK bids from that node are voided.
   - Aicent Brain receives a shadow-state update and re-schedules the task via fresh auction.
 - **Self-healing**: The quarantined node is forced into “immune recovery mode” — it can only send diagnostic pulses until it proves clean watermark regeneration.
