@@ -7,7 +7,8 @@
   <code> 🛡️ Status: EVOLVING </code>
 </p>
 
-![001](https://github.com/user-attachments/assets/03542fdc-6d76-47ab-8d22-39d29a5d9faa)
+![RPKI](https://github.com/user-attachments/assets/edef4266-7935-4885-b300-bd077cdc8c60)
+
 
 AI-native Zero-Trust security layer. Parallel tensor watermarking and RPKI-based identity attestation. 300µs quarantine for malicious pulses.
 **Live Dissection: RPKI.com — The Immune System**  
