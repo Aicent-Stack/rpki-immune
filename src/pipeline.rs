@@ -2,7 +2,7 @@
 // Domain: RPKI.com
 // Purpose: Parallel immune scanning & 300µs pulse quarantine logic.
 // Status: RFC-002 Draft.
-// rpki-immune/src/pipeline.rs — the immune system core
+// rpki/src/pipeline.rs — the immune system core
 
 use std::sync::atomic::{AtomicU64, Ordering};
 use rpkid::dag::MerkleDag;           // local RPKI cache
