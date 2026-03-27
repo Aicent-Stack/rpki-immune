@@ -1,4 +1,15 @@
+# 🧠 Aicent Stack: The Sovereign AI Nervous System
+
 # rpki — The Immune System of Aicent Stack
+
+ ⚪ **AICENT**  💎 **RTTP**  🔴 **RPKI**  🟢 **ZCMK**  🟡 **GTIOT** 
+ 
+<p align="left">
+  <code> 🛠️ Build: Passing </code> &nbsp; 
+  <code> 🦀 Language: Rust </code> &nbsp; 
+  <code> 🛡️ Status: EVOLVING </code>
+</p>
+
 AI-native Zero-Trust security layer. Parallel tensor watermarking and RPKI-based identity attestation. 300µs quarantine for malicious pulses.
 
 **Live Dissection: RPKI.com — The Immune System**  
