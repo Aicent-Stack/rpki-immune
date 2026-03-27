@@ -5,8 +5,8 @@
 // rpki/src/pipeline.rs — the immune system core
 
 use std::sync::atomic::{AtomicU64, Ordering};
-use rpki::dag::MerkleDag;           // local RPKI cache
-use rpki::watermark::{extract_watermark, verify_watermark};
+use crate::dag::MerkleDag;
+use crate::watermark::{extract_watermark, verify_watermark};
 use rttp::PulseFrameHeader;
 
 #[repr(align(64))]  // force cache-line alignment
