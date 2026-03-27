@@ -1,4 +1,4 @@
-# 🧠 Aicent Stack: The Sovereign AI Nervous System
+# 🧠 Aicent Stack: rpki — The Immune System of Aicent Stack
 
  ⚪ **AICENT**  💎 **RTTP**  🔴 **RPKI**  🟢 **ZCMK**  🟡 **GTIOT** 
 <p align="left">
@@ -6,7 +6,6 @@
   <code> 🦀 Language: Rust </code> &nbsp; 
   <code> 🛡️ Status: EVOLVING </code>
 </p>
-# rpki — The Immune System of Aicent Stack
 
 ![001](https://github.com/user-attachments/assets/03542fdc-6d76-47ab-8d22-39d29a5d9faa)
 
