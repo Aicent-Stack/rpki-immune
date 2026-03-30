@@ -1,15 +1,9 @@
-//! # RFC-003: RPKI (Resource Public Key Infrastructure)
-//! 
-//! The zero-trust immunity system for #AicentStack.
-//! 
-//! ## Core Specifications:
-//! - Zero-trust task chain watermarking
-//! - Pulse Frame fingerprint anti-counterfeiting
-//! - Sovereign Identity (AID) cross-verification
-//! 
-//! Copyright 2026 Aicent.com Organization.
-//! Licensed under the Apache-2.0 License.
-//! Specification: RFC-003 Draft.
+// Aicent Stack | RPKI (Resource Public Key Infrastructure) 
+// Domain: http://rpki.com
+// Purpose: Parallel immune scanning & 300µs pulse quarantine logic.
+// Specification: RFC-003 Draft.
+// License: Apache-2.0 via Aicent.com Organization.
+//! # RFC-003: RPKI Immune Pipeline
 
 pub mod pipeline;
 
