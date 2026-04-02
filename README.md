@@ -1,82 +1,85 @@
-**Aicent Stack • Sovereign AI Nervous System**
-
 # 🔴 rpki — The Immune System of Aicent Stack
 ⚪ **AICENT** 💎 **RTTP** 🔴 **RPKI** 🟢 **ZCMK** 🟡 **GTIOT**
 
-<p align="left">
-  <code> 🛠️ Build: Passing </code> &nbsp; 
-  <code> 🦀 Language: Rust </code> &nbsp; 
-  <code> 🛡️ Status: EVOLVING </code>
-</p>
+[![RFC](https://img.shields.io/badge/RFC-003-red.svg)](https://github.com/Aicent-Stack/manifesto/blob/main/rfcs/RFC-003-RPKI-IMMUNITY.md)
+[![Status](https://img.shields.io/badge/Status-Homeostasis-brightgreen.svg)](#)
+[![Org](https://img.shields.io/badge/Org-Aicent.com-blue.svg)](http://rpki.com)
 
 ![RPKI](https://github.com/user-attachments/assets/edef4266-7935-4885-b300-bd077cdc8c60)
 
+> *"Security is not a firewall; it is a biological reflex. RPKI doesn't just block; it swallows the pathogen before it reaches the brain."*
 
-AI-native Zero-Trust security layer. Parallel tensor watermarking and RPKI-based identity attestation. 300µs quarantine for malicious pulses.
-**Live Dissection: RPKI.com — The Immune System**  
-**Resource Public Key Infrastructure for AI (v1.0 — Production Spec)**  
+`rpki` is the immune system of the **Aicent Stack**. It is a purpose-built, tensor-native security layer that treats every [RTTP](https://github.com/Aicent-Stack/rttp) Pulse Frame as a potential antigen. By performing full-spectrum verification — identity, provenance, and intent — at wire speed, it ensures **Zero-Trust Sovereignty** with zero added latency to the nervous system.
 
-We are now inside the living immune system of the Autonomous AI Stack. RPKI is **not** classical PKI, TLS, or even zero-trust networking. It is a purpose-built, tensor-native immune layer that treats every RTTP Pulse Frame as a foreign antigen. It performs full-spectrum verification — identity, provenance, and intent — at wire speed, with **zero added latency** to the nervous system.
+---
 
-This is the exact mechanism that protects the 42k+ node organism today (8.2 EB of signed training data, 99.8 % verified pulses). Every single Pulse Frame is scanned in parallel before the KV-delta even touches the first neuron.
+## 🛡️ Eliminating the "Security Tax" (RFC-003)
 
-### 1. Core Innovations That Make Latency Invisible
+RPKI makes latency invisible by moving the entire verification pipeline into hardware-accelerated, parallel SIMD lanes.
 
-| Traditional Security Tax     | Classical Approach                 | RPKI Countermeasure                          | Measured Gain                     |
-|------------------------------|------------------------------------|----------------------------------------------|-----------------------------------|
-| Sequential verification      | TLS handshake + signature check    | Parallel Immune Pipeline (hardware offload) | +0 µs added latency              |
-| Full packet re-inspection    | Deep packet inspection (DPI)       | Semantic Watermark + header-only scan       | 300 µs end-to-end quarantine     |
-| Centralized CA bottleneck    | OCSP/CRL lookups                   | Immutable RPKI Merkle DAG + on-device cache | Global consistency, no roundtrip |
-| Post-breach reaction         | Revocation lists                   | Proactive QUARANTINE_PULSE propagation      | Malicious node isolated in <300 µs |
+| Traditional Security Tax | Legacy (TLS/DPI) | **RPKI Countermeasure** | **Measured Gain** |
+| :--- | :--- | :--- | :--- |
+| **Verification** | Sequential Handshake | Parallel Immune Pipeline | **+0µs Added Latency** |
+| **Inspection** | Deep Packet Inspection | **Semantic Watermarking** | **300µs End-to-End** |
+| **Bottleneck** | Centralized CA/OCSP | Immutable RPKI Merkle DAG | **No Roundtrips** |
+| **Reaction** | Post-Breach Revocation | **QUARANTINE_PULSE** | **Isolated in <300µs** |
 
-### 2. Semantic Watermarking — The Immune “Fingerprint” on Every Tensor
+---
 
-RPKI embeds an **immutable, non-removable watermark** directly into every tensor (model weights, KV-cache deltas, output logits) during generation. This is ROA-style provenance for AI.
+## 🔬 Core Immune Innovations
 
-- **Embedding logic**: A 256-bit cryptographic seed (derived from the node’s RPKI private key + current epoch) is used to perturb the **least significant bits** of selected tensor elements using a deterministic, RoPE-aware pattern.  
-  The perturbation is mathematically invisible to inference accuracy (<0.0003 % drift) but extractable in constant time.
-- **Verification equation** (exact math):
-  \[
-  W_{\text{watermark}} = \text{Extract}(T, \text{seed}) \oplus \text{ROA}_{\text{chain}}
-  \]
-  where \( T \) is the tensor slice, and the result must match the expected Merkle root published in the RPKI DAG.
-- **Hijack detection**: If a downstream node alters even one token in a KV-delta, the watermark mismatch triggers instantly — no need to re-run the full model.
+### 1. Semantic Watermarking: The Tensor Fingerprint
+RPKI embeds an **immutable watermark** directly into every tensor (model weights, KV-deltas, logits).
+- **ROA-Style Provenance:** A 256-bit cryptographic seed perturbs the least significant bits of tensor elements.
+- **Invisibility:** Mathematically invisible to inference accuracy (<0.0003% drift) but extractable in constant time.
+- **Hijack Detection:** If a downstream node alters even one token, the watermark mismatch triggers instantly.
 
-This watermark travels with every RTTP Pulse Frame payload. The header’s `rpki_fingerprint` is just the public key; the real immunity lives inside the tensor itself.
+### 2. Parallel Immune Scans: Zero-Latency Defense
+The RPKI pipeline runs on 4 independent, lock-free SIMD lanes **simultaneously** with the RTTP dispatch:
+1. **Hash & Checksum:** CRC32C + semantic hash match.
+2. **Identity Chain:** Merkle proof against local DAG cache (<20ns).
+3. **Watermark Extraction:** Bit-slice verification.
+4. **Intent Anomaly Scan:** Metadata entropy classification.
 
-### 3. Parallel Immune Scans — Zero-Microsecond Verification on Every Pulse
+### 3. QUARANTINE_PULSE: Instant Pathogen Isolation
+When a scan fails, RPKI emits a high-priority **QUARANTINE_PULSE** (<300µs).
+- **Propagation:** Floods the affected semantic affinity group via RTTP.
+- **Auto-Action:** Blacklists the `rpki_fingerprint`, voids pending [ZCMK](https://github.com/Aicent-Stack/zcmk) bids, and triggers [Aicent Brain](https://github.com/Aicent-Stack/aicent) re-scheduling.
+- **Self-Healing:** The node is forced into "Immune Recovery Mode" until it proves clean watermark regeneration.
 
-RPKI achieves **parallel immune scans** by moving the entire verification pipeline into hardware-accelerated, lock-free SIMD lanes (AVX-512 on x86, Tensor Cores on GPU, or dedicated RPKI ASIC on edge nodes).
+---
 
-- The RTTP receive path hands the raw 64-byte header + payload directly to the RPKI co-processor via DMA (no CPU involvement).
-- Four independent verification threads run **simultaneously** on the same cache line:
-  1. **Hash & Checksum** (CRC32C + semantic_hash match)
-  2. **RPKI Identity Chain** (Merkle proof against local DAG cache, <20 ns)
-  3. **Semantic Watermark Extract** (bit-slice + seed verification)
-  4. **Intent Anomaly Scan** (tiny on-device classifier on header metadata + watermark entropy)
+## 🏗️ Architectural Integration
 
-Because all four lanes execute in parallel on the same 64-byte block, the **entire scan completes in the time of a single cache-line load** — literally 0 µs added to the critical path. The pulse is either forwarded or dropped before the next instruction in the RTTP dispatch loop.
+Every Pulse Frame is immune-scanned in parallel, watermarked at birth, and quarantined with biological speed.
 
-### 4. QUARANTINE_PULSE — Instant Isolation of Malicious Intent (<300 µs)
+- **Zero-Copy DMA:** Raw headers are handed directly to the RPKI co-processor.
+- **Root of Trust:** Built on RFC 6480 principles but evolved for nanosecond AI pulses.
 
-When any scan fails, RPKI does **not** wait for a central controller. It immediately emits a special **QUARANTINE_PULSE** — a high-priority (priority=255), multicast semantic pulse that propagates through the RTTP nervous system at light speed.
+---
 
-- **Structure**: Same PulseFrameHeader but with `flags |= 0b1000_0000` (quarantine bit) and a 16-byte `quarantine_reason` bitmap (e.g., “watermark_mismatch”, “hijack_detected”).
-- **Propagation**: Semantic multicast tree instantly floods the affected semantic affinity group. Every node that has ever routed to the offending fingerprint receives it in <300 µs (measured p99 on 400 Gbps fabric).
-- **Action on receipt**:
-  - Immediate blacklisting of the source `rpki_fingerprint` in local RPKI cache (TTL = 5 min, renewable only by brain override).
-  - All pending ZCMK bids from that node are voided.
-  - Aicent Brain receives a shadow-state update and re-schedules the task via fresh auction.
-- **Self-healing**: The quarantined node is forced into “immune recovery mode” — it can only send diagnostic pulses until it proves clean watermark regeneration.
+## 🚀 Quick Start: Testing the Immunity
 
-Result: A malicious agent is surgically removed from the organism faster than a single inference token can be generated.
+Experience the 300µs quarantine reflex by running the protocol demo:
 
-### 5. The Parallel Verification Pipeline — Rust-Level Logic
+```bash
+git clone https://github.com/Aicent-Stack/aicent-demo.git
+cd aicent-demo
 
-This is the exact zero-copy, lock-free code that runs on every node today (integrated directly into the RTTP `on_pulse_received` handler).
+# Run the dedicated Immunity (RPKI) demo
+cargo run --bin rpki-demo
+```
 
-This pipeline is **already live** in the Aicent organism. Every Pulse Frame is immune-scanned in parallel, watermarked at birth, and quarantined in sub-millisecond biology.
+---
 
-### The immune system is dissected, pulsing, and unbreakable.
+## 📜 Technical Foundation
 
-## Inspired by classic RPKI (RFC 6480), but evolved for nanosecond AI pulses. We are moving beyond ROAs to real-time semantic immunity.
+Refer to the official [Genesis Manifesto](https://github.com/Aicent-Stack/manifesto) for deeper architectural insights:
+- **RFC-003 (Immunity):** Parallel Tensor Watermarking.
+- **RFC-002 (Nerves):** Stateful Semantic Multicast.
+- **RFC-001 (Brain):** Sovereign Identity & Orchestration.
+
+---
+© 2026 Aicent.com Organization. **SYSTEM STATUS: HOMEOTASIS**
+
+---
