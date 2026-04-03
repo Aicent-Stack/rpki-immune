@@ -1,13 +1,44 @@
 [package]
 name = "rpki"
+description = "RPKI: Parallel Tensor Watermarking and Pathogen Isolation Protocol [RFC-003]"
 version.workspace = true
 edition.workspace = true
 authors.workspace = true
 license.workspace = true
 repository.workspace = true
+homepage = "https://rpki.com"
+documentation = "https://github.com/Aicent-Stack/manifesto/blob/main/rfcs/RFC-003-RPKI-IMMUNITY.md"
+keywords = ["sovereign-ai", "security", "rfc-003", "zero-trust", "tensor-watermark"]
+categories = ["cryptography", "network-programming", "hardware"]
 
 [dependencies]
+# --- Core Organism Linking ---
+# RPKI must inspect RTTP pulses in-band
+rttp.workspace = true
+
+# --- Parallel Immune Pipeline ---
+# SIMD-level parallel scanning for <10µs targets
+rayon.workspace = true
+crossbeam.workspace = true
+crossbeam-channel.workspace = true
+
+# --- Cryptographic Primitives (The Immune DNA) ---
+# High-performance hashing and steganography engines
+sha2.workspace = true          # For Merkle-DAG chain verification
+ring.workspace = true          # High-speed cryptographic signing
+zeroize.workspace = true       # [SECURITY] Memory-safe credential clearing
+
+# --- Telemetry & Reasoning integration ---
 serde.workspace = true
 anyhow.workspace = true
-rayon.workspace = true
-crossbeam-channel.workspace = true
+tracing.workspace = true      # For real-time pathogen alerts
+
+[features]
+default = ["std"]
+std = ["serde/std", "anyhow/std"]
+# [RFC-003] SIMD acceleration for AVX-512 hardware offloading
+simd = []
+
+[dev-dependencies]
+# For sub-millisecond attack scenario simulations
+tokio = { workspace = true, features = ["full"] }
