@@ -8,7 +8,7 @@ Parallel Tensor Watermarking & Pathogen Isolation Protocol [RFC-003]
 [![Status](https://img.shields.io/badge/Status-Homeostasis-brightgreen.svg)](#)
 [![Org](https://img.shields.io/badge/Org-Aicent.com-blue.svg)](http://rpki.com)
 
-⚪ **AICENT** (Brain) | 💎 **RTTP** (Nerves) | 🔴 **RPKI** (Immunity) | 🟢 **ZCMK** (Blood) | 🟡 **GTIOT** (Body)
+⚪ AICENT | 💎 RTTP | 🔴 RPKI | 🟢 ZCMK | 🟡 GTIOT | 🟣 AICENT-NET
 
 ![RPKI](https://github.com/user-attachments/assets/edef4266-7935-4885-b300-bd077cdc8c60)
 
