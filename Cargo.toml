@@ -2,47 +2,50 @@
 name = "rpki"
 description = "RPKI: Parallel Tensor Watermarking and Pathogen Isolation Protocol [RFC-003]"
 version.workspace = true
-edition = "2024" # Explicitly set edition to 2024 for consistency
+edition = "2024" # Explicitly set edition to 2024 for full compatibility
 authors = ["Aicent Stack Team <lee@aicent.com>"]
 license = "Apache-2.0"
-repository = "https://github.com/Aicent-Stack/rpki" # Point to its own repository
-homepage = "https://rpki.com"
+repository = "https://github.com/Aicent-Stack/rpki" # Point to its own independent repository
+homepage = "http://rpki.com"
 documentation = "https://github.com/Aicent-Stack/manifesto/blob/main/rfcs/RFC-003-RPKI-IMMUNITY.md"
-keywords = ["sovereign-ai", "zero-trust", "tensor-watermarking", "rfc-003", "pathogen-isolation"]
+keywords = ["sovereign-ai", "zero-trust", "tensor-watermarking", "rfc-003", "pathogen-isolation", "128-bit-atomic"]
 categories = ["cryptography", "network-programming", "security", "hardware-acceleration"]
 rust-version = "1.85" # Explicitly set rust-version to 1.85 for consistency
 
 [dependencies]
 # --- Core Organism Linking (Unidirectional Dependency Flow) ---
-# RPKI secures the Neural Spine (RTTP) at the hardware gate
-rttp = { workspace = true }
+# RPKI inspects the Neural Spine (RTTP) in-band for all security assertions.
+rttp = { workspace = true, features = ["std"] } # Explicitly enable RTTP's std feature
 
 # --- Parallel Immune Pipeline ---
-# [RFC-003] SIMD-level acceleration for sub-300µs pathogen detection
+# SIMD-level acceleration for sub-300µs pathogen detection.
 rayon = { workspace = true }
 crossbeam = { workspace = true }
 crossbeam-channel = { workspace = true }
-parking_lot = { workspace = true } # High-concurrency immune triage
+parking_lot = { workspace = true }   # High-concurrency immune triage
+once_cell = { workspace = true }     # Safe static initialization
 
 # --- Cryptographic DNA (Zero-Trust Provenance) ---
-# [PERF] Hardware-native crypto primitives for In-band Tensor Steganography
+# Hardware-native crypto primitives for In-band Tensor Steganography.
 sha2 = { workspace = true }        # Merkle-DAG chain integrity
 ring = { workspace = true }        # Hardware-accelerated signing/verification
-zeroize = { workspace = true, features = ["derive"] } # [SECURITY] Memory-safe credential clearing
+zeroize = { workspace = true, features = ["derive"] } # [SECURITY] Secure credential clearing
 
 # --- Logic & Telemetry ---
 serde = { workspace = true, features = ["derive"] }
 anyhow = { workspace = true }
 tracing = { workspace = true }     # Real-time pathogen audit trails
-once_cell = { workspace = true }   # Safe static initialization
 
 [features]
 default = ["std"]
 # [Standard v1.0] Standard library support for general-purpose compute.
-# Explicitly re-exporting std for all downstream dependencies for full compatibility.
+# Explicitly re-exporting 'std' for all foundational dependencies.
 std = ["serde/std", "anyhow/std", "rttp/std"] 
-# [RFC-003] Enable AVX-512/SIMD acceleration for tensor watermarking
+
+# [RFC-003] Feature flag to enable AVX-512/SIMD acceleration for tensor watermarking.
 simd-acceleration = []
+# [RFC-006] Feature flag for collective Hive-Mind cross-attestation (Swarm Shield).
+hive-shield = []
 
 [dev-dependencies]
 # Benchmarking quarantine latency targets (<300µs)
