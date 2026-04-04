@@ -36,12 +36,6 @@ anyhow = { workspace = true }
 tracing = { workspace = true }     # Real-time pathogen isolation audit trails
 once_cell = { workspace = true }
 
-[features]
-default = ["std"]
-std = ["serde/std", "anyhow/std", "rttp/std"]
-# [RFC-003] Enable AVX-512/SIMD acceleration for tensor watermarking
-simd-acceleration = []
-
 [dev-dependencies]
 # Benchmarking for 300µs quarantine latency targets
 criterion = { workspace = true }
