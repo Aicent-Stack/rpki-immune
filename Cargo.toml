@@ -1,7 +1,7 @@
 [package]
 name = "rpki"
 description = "RPKI: Parallel Tensor Watermarking and Pathogen Isolation Protocol [RFC-003]"
-# Inheriting core protocol DNA from the root workspace
+# Inheriting core protocol DNA from the imperial root workspace
 version.workspace = true
 edition.workspace = true
 authors.workspace = true
@@ -16,14 +16,15 @@ keywords = ["sovereign-ai", "zero-trust", "tensor-watermarking", "rfc-003", "pat
 categories = ["cryptography", "network-programming", "security", "hardware-acceleration"]
 
 [dependencies]
-# --- Core Organism Linking (The Defensive Gate) ---
+# --- Core Organism Linking (Unidirectional Dependency Flow) ---
 # RPKI secures the Neural Spine (RTTP) by intercepting pulses in-band.
 # Explicitly enable RTTP's 'std' feature for full protocol integration.
 rttp = { workspace = true, features = ["std"] }
 
 # --- Parallel Immune Pipeline (SIMD Execution) ---
 # Designed for <10µs scan latency on hardware-accelerated units.
-rayon             = { workspace = true } # For parallel 4-lane SIMD triage
+# [PERF] Utilizing Rayon for work-stealing parallel triage.
+rayon             = { workspace = true } 
 crossbeam         = { workspace = true } # Lock-free primitives for threat manifolds
 crossbeam-channel = { workspace = true } # High-frequency pathogen reporting
 parking_lot       = { workspace = true } # HFT-grade synchronization for audit state
@@ -45,10 +46,15 @@ tracing = { workspace = true }        # Real-time pathogen isolation audit trail
 default = ["std"]
 
 # [Standard v1.0] Standard library support for general-purpose compute.
-# Re-exports 'std' for internal Aicent Stack dependencies.
-std = ["serde/std", "anyhow/std", "rttp/std"]
+# 🛡️ FIX: Removed 'smallvec/std' as it does not exist in the source crate.
+# Re-exports 'std' for internal Aicent Stack dependencies to prevent feature conflict.
+std = [
+    "serde/std", 
+    "anyhow/std", 
+    "rttp/std"
+]
 
-# [RFC-003] SIMD acceleration for Tensor Watermarking (AVX-512 / Tensor Cores).
+# [RFC-003] Enable AVX-512/SIMD acceleration for Tensor Watermarking.
 # Enabling this activates hardware-specific intrinsics for bit-slice extraction.
 simd-acceleration = []
 
