@@ -1,53 +1,61 @@
 [package]
 name = "rpki"
 description = "RPKI: Parallel Tensor Watermarking and Pathogen Isolation Protocol [RFC-003]"
+# Inheriting core protocol DNA from the root workspace
 version.workspace = true
-edition = "2024" # Explicitly set edition to 2024 for full compatibility
-authors = ["Aicent Stack Team <lee@aicent.com>"]
-license = "Apache-2.0"
-repository = "https://github.com/Aicent-Stack/rpki" # Points to its own independent repository
-homepage = "http://rpki.com"
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage = "https://rpki.com"
 documentation = "https://github.com/Aicent-Stack/manifesto/blob/main/rfcs/RFC-003-RPKI-IMMUNITY.md"
+rust-version.workspace = true
+
+# Keywords and categories for AI-native zero-trust authority
 keywords = ["sovereign-ai", "zero-trust", "tensor-watermarking", "rfc-003", "pathogen-isolation", "128-bit-atomic"]
 categories = ["cryptography", "network-programming", "security", "hardware-acceleration"]
-rust-version.workspace = true # Explicitly inherit rust-version for consistency
 
 [dependencies]
-# --- Core Organism Linking (Unidirectional Dependency Flow) ---
-# RPKI inspects the Neural Spine (RTTP) in-band for all security assertions.
-# Explicitly enable RTTP's std feature for full compatibility.
-rttp = { workspace = true, features = ["std"] } 
+# --- Core Organism Linking (The Defensive Gate) ---
+# RPKI secures the Neural Spine (RTTP) by intercepting pulses in-band.
+# Explicitly enable RTTP's 'std' feature for full protocol integration.
+rttp = { workspace = true, features = ["std"] }
 
-# --- Parallel Immune Pipeline ---
-# [RFC-003] SIMD-level acceleration for sub-300µs pathogen detection.
-rayon = { workspace = true }
-crossbeam = { workspace = true }
-crossbeam-channel = { workspace = true }
-parking_lot = { workspace = true }   # High-concurrency immune triage
-once_cell = { workspace = true }     # Safe static initialization
+# --- Parallel Immune Pipeline (SIMD Execution) ---
+# Designed for <10µs scan latency on hardware-accelerated units.
+rayon             = { workspace = true } # For parallel 4-lane SIMD triage
+crossbeam         = { workspace = true } # Lock-free primitives for threat manifolds
+crossbeam-channel = { workspace = true } # High-frequency pathogen reporting
+parking_lot       = { workspace = true } # HFT-grade synchronization for audit state
+once_cell         = { workspace = true } # Thread-safe initialization of the Merkle-DAG
 
 # --- Cryptographic DNA (Zero-Trust Provenance) ---
-# Hardware-native crypto primitives for In-band Tensor Steganography.
-sha2 = { workspace = true }        # Merkle-DAG chain integrity
-ring = { workspace = true }        # Hardware-accelerated signing/verification
-zeroize = { workspace = true, features = ["derive"] } # [SECURITY] Secure credential clearing
+# High-performance primitives for the Data Soul's integrity.
+sha2    = { workspace = true }        # Merkle-DAG hashing for identity chains
+ring    = { workspace = true }        # Hardware-accelerated cryptographic signatures
+zeroize = { workspace = true, features = ["derive"] } # [SECURITY] Secure memory clearing
 
-# --- Logic & Telemetry ---
-serde = { workspace = true, features = ["derive"] }
-anyhow = { workspace = true }
-tracing = { workspace = true }     # Real-time pathogen audit trails
+# --- Logic, Telemetry & Audit ---
+serde   = { workspace = true, features = ["derive"] }
+anyhow  = { workspace = true }
+tracing = { workspace = true }        # Real-time pathogen isolation audit trails
 
 [features]
+# Standard implementation: Enables zero-trust defense for server and edge clusters.
 default = ["std"]
-# [Standard v1.0] Standard library support for general-purpose compute.
-# Explicitly re-exporting 'std' for internal Aicent Stack dependencies to avoid cyclic feature conflicts.
-std = ["rttp/std"] 
 
-# [RFC-003] Feature flag to enable AVX-512/SIMD acceleration for tensor watermarking.
+# [Standard v1.0] Standard library support for general-purpose compute.
+# Re-exports 'std' for internal Aicent Stack dependencies.
+std = ["serde/std", "anyhow/std", "rttp/std"]
+
+# [RFC-003] SIMD acceleration for Tensor Watermarking (AVX-512 / Tensor Cores).
+# Enabling this activates hardware-specific intrinsics for bit-slice extraction.
 simd-acceleration = []
-# [RFC-006] Feature flag for collective Hive-Mind cross-attestation (Swarm Shield).
+
+# [RFC-006] Hive Shield Integration.
+# Enables swarm-wide collective attestation of tensor pathogens.
 hive-shield = []
 
 [dev-dependencies]
-# Benchmarking quarantine latency targets (<300µs)
-criterion = { workspace = true }
+# Performance benchmarking for 300µs pathogen isolation targets.
+criterion = { workspace = true, features = ["async_tokio"] }
