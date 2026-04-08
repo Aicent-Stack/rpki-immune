@@ -5,6 +5,7 @@
 [![Org](https://img.shields.io/badge/Org-Aicent.com-blue.svg)](http://rpki.com)
 
 **⚪ [AICENT](http://aicent.com) | 💎 [RTTP](http://rttp.com) | 🔴 [RPKI](http://rpki.com) | 🟢 [ZCMK](http://zcmk.com) | 🟡 [GTIOT](http://gtiot.com) | 🟣 [AICENT-NET](http://aicent.net) | 🌿 [epoekie](http://epoekie.com)**
+
 Aicent Stack • Sovereign AI Nervous System
 
 # 🔴 rpki — The Immune System of Aicent Stack
