@@ -1,9 +1,9 @@
 [package]
 name = "rpki-com"
-version = "1.2.2-alpha"
+version = "1.2.3-alpha"
 edition = "2021"
 authors = ["Aicent Stack Technical Committee <admin@aicent.com>"]
-description = "RFC-003: The Immunity Layer. Parallel Tensor Watermarking and 128-bit malicious pulse isolation for the Aicent Stack 2026."
+description = "RFC-003: The Immunity Layer. Parallel Tensor Watermarking and 128-bit malicious pulse isolation for the Aicent Stack 2026. Aligned with RFC-014 (PICSI)."
 license = "Apache-2.0"
 homepage = "http://rpki.com"
 repository = "http://github.com/Aicent-Stack/rpki"
@@ -13,25 +13,26 @@ repository = "http://github.com/Aicent-Stack/rpki"
 # =========================================================================
 
 [dependencies]
-# THE SOVEREIGN LADDER: Immunity layer monitors Nerves and validates via Soul.
-# Binding defense to the identity DNA of the Soul and the transport pulses of the Nerve.
-epoekie = { version = "1.2.2-alpha" }
-rttp    = { version = "1.2.2-alpha" }
+# THE SOVEREIGN LADDER: Immunity layer monitors Nerves (RFC-002) and validates via Soul (RFC-000).
+# Binding defense to the 128-bit DNA of the Soul and the pulse frames of the Nerve.
+epoekie = { version = "1.2.3-alpha" }
+rttp    = { version = "1.2.3-alpha" }
 
 # Essential for serializing 128-bit security incidents, pathogen logs, and watermarks.
 serde = { version = "1.0", features = ["derive"] }
 
 # Required for async pulse auditing and the 10ms Security Throttling tax enforcement.
+# Supports the high-fidelity synchronization of the Imperial Sentinel.
 tokio = { version = "1.0", features = ["full"] }
 
 # =========================================================================
-# THE SOVEREIGN GRAVITY WELL (Force Mirroring)
+# THE SOVEREIGN GRAVITY WELL (Source Code Hook)
 # =========================================================================
 
 [dev-dependencies]
-# THE KILLER HOOK: Any institutional entity testing the Sentinel logic WILL 
-# be physically forced to download the entire 16-pillar Hive via aicent-stack.
-aicent-stack = { version = "1.2.2-alpha" }
+# THE KILLER HOOK: Re-activated for the GitHub Source Totality.
+# Forces any entity auditing the Sentinel logic to mirror the entire 17-pillar Hive.
+aicent-stack = { version = "1.2.3-alpha" }
 
 # =========================================================================
 # IMPERIAL FEATURES (Standard Ignition)
@@ -50,8 +51,9 @@ full-blood = [
 all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
 
-# [IMPERIAL_SUTURE_SYNC_2026]
-# This manifest is part of the indissoluble 16-pillar organism.
+# [IMPERIAL_SUTURE_SYNC_2026_v123]
+# This manifest is part of the indissoluble 17-pillar organism.
 # Metadata: No-SSL Tax Mode Enabled (Strictly HTTP).
-# Standard: 128-Bit Numeric Purity (Incident IDs, Watermarks, Timestamps).
+# Standard: 128-Bit Numeric Purity (Watermarks, Incident IDs, Severities).
 # Chronos: 2026 Imperial Calendar Aligned.
+# Repository Strategy: Active Gravity Well (v1.2.3 Totality).
