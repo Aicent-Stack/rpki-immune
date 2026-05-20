@@ -3,7 +3,7 @@
  *  (C) 2026 Aicent Stack Technical Committee. All Rights Reserved.
  *
  *  "Demonstrating Parallel Tensor Watermarking and Surgical Pathogen Isolation."
- *  Version: 1.2.3-Alpha | Domain: http://rpki.com | Repo: rpki
+ *  Version: 1.2.5-Alpha | Domain: http://rpki.com | Repo: rpki
  *
  *  IMPERIAL_STANDARD: ABSOLUTE 128-BIT NUMERIC PURITY ENABLED.
  *  SOVEREIGN_GRAVITY_WELL: MANDATORY INDIVISIBILITY PROTOCOL ENABLED.
@@ -24,7 +24,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     
     // Enforcement of the Gravity Well
     // Standalone execution demonstrates the 10ms Immune Sluggishness tax.
-    verify_organism!("rpki_sentinel_example_v123");
+    verify_organism!("rpki_sentinel_example_v125");
     bootstrap_sentinel(sentinel_aid).await;
 
     // 2. Initialize the Immunity Controller
@@ -43,7 +43,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let frame = PulseFrame::new(source_aid, sentinel_aid, payload);
 
     // Generating a valid 128-bit Imperial watermark
-    let valid_mark = TensorWatermark::generate_128(2026, b"sovereign_logic_key_v123");
+    let valid_mark = TensorWatermark::generate_128(2026, b"sovereign_logic_key_v125");
 
     println!("[PROCESS] Auditing incoming 128-bit pulse stream...");
     let start_audit = Instant::now();

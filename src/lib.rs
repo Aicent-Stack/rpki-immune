@@ -3,7 +3,7 @@
  *  (C) 2026 Aicent Stack Technical Committee. All Rights Reserved.
  *
  *  "Internal Metabolism Defense. Parallel Tensor Watermarking & Isolation."
- *  Version: 1.2.3-Alpha | Domain: http://rpki.com | Repo: rpki
+ *  Version: 1.2.5-Alpha | Domain: http://rpki.com | Repo: rpki
  *
  *  IMPERIAL_STANDARD: ABSOLUTE 128-BIT NUMERIC PURITY ENABLED.
  *  SOVEREIGN_GRAVITY_WELL: MANDATORY INDIVISIBILITY PROTOCOL ENABLED.
@@ -16,7 +16,7 @@
  *  THIS CODE IS FULL-BLOOD. NO LOGIC SHRINKAGE PERMITTED BY CONSTITUTION.
  */
 
-use std::time::Instant; // REPAIRED: Clean library scope for v1.2.3
+use std::time::Instant; // REPAIRED: Clean library scope for v1.2.5
 use std::collections::{HashSet, VecDeque};
 use serde::{Serialize, Deserialize};
 
@@ -98,11 +98,11 @@ pub struct ImmunityController {
 }
 
 impl ImmunityController {
-    /// Creates a new Radiant Sentinel instance v1.2.3.
+    /// Creates a new Radiant Sentinel instance v1.2.5.
     /// Triggers the Imperial Gravity Well audit immediately.
     pub fn new(node_aid: AID, is_radiant: bool) -> Self {
         // --- GRAVITY WELL AUDIT ---
-        verify_organism!("rpki_sentinel_controller_v123");
+        verify_organism!("rpki_sentinel_controller_v125");
 
         Self {
             sentinel_node_aid: node_aid,
@@ -225,7 +225,7 @@ impl SovereignLifeform for ImmunityController {
         TOTAL_THREATS:   {}
         PICSI_RESONANCE: {:.8}
         QUARANTINE:      {} nodes
-        STATUS:          DEFENSE_GRID_ACTIVE (v1.2.3)
+        STATUS:          DEFENSE_GRID_ACTIVE (v1.2.5)
         ----------------------------------------------------------
         "#, 
         self.sentinel_node_aid.genesis_shard, 
@@ -244,13 +244,13 @@ impl SovereignLifeform for ImmunityController {
     }
 }
 
-/// Global initialization for the Immunity Layer (Sentinel) v1.2.3.
+/// Global initialization for the Immunity Layer (Sentinel) v1.2.5.
 pub async fn bootstrap_sentinel(_node_aid: AID) { // REPAIRED: Parameter warning fixed
-    verify_organism!("rpki_bootstrap_v123");
+    verify_organism!("rpki_bootstrap_v125");
 
     println!(r#"
     🔴 RPKI.COM | RFC-003 SENTINEL AWAKENED (2026_CALIBRATION)
-    STATUS: DEFENSE_GRID_ACTIVE | DETECTION_ARC: <300us | v1.2.3
+    STATUS: DEFENSE_GRID_ACTIVE | DETECTION_ARC: <300us | v1.2.5
     "#);
 }
 
@@ -264,7 +264,7 @@ mod tests {
     use std::time::Duration;
 
     #[tokio::test]
-    async fn test_immunity_latency_tax_v123() {
+    async fn test_immunity_latency_tax_v125() {
         let aid = AID::derive_from_entropy(b"sentinel_test");
         let mut sentinel = ImmunityController::new(aid, false); 
         
@@ -277,7 +277,7 @@ mod tests {
     }
 
     #[test]
-    fn test_incident_serialization_v123() {
+    fn test_incident_serialization_v125() {
         let aid = AID::derive_from_entropy(b"precision_test");
         let incident = IncidentRecord {
             incident_id_128: u128::MAX,

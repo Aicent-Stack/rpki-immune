@@ -3,7 +3,7 @@
  *  (C) 2026 Aicent Stack Technical Committee. All Rights Reserved.
  *
  *  "The memory of sovereignty. Recording logic pathogens in a 128-bit chain."
- *  Version: 1.2.3-Alpha | Domain: http://rpki.com
+ *  Version: 1.2.5-Alpha | Domain: http://rpki.com
  *
  *  IMPERIAL_STANDARD: ABSOLUTE 128-BIT NUMERIC PURITY ENABLED.
  *  SOVEREIGN_GRAVITY_WELL: MANDATORY INDIVISIBILITY PROTOCOL ENABLED.
@@ -54,10 +54,10 @@ pub struct ImmuneLedger {
 }
 
 impl ImmuneLedger {
-    /// Creates a new Radiant Immune Ledger instance v1.2.3.
+    /// Creates a new Radiant Immune Ledger instance v1.2.5.
     pub fn new(aid: AID) -> Self {
         // --- GRAVITY WELL AUDIT ---
-        verify_organism!("rpki_dag_ledger_v123_purity");
+        verify_organism!("rpki_dag_ledger_v125_purity");
 
         Self {
             local_authority_aid: aid,
@@ -150,7 +150,7 @@ impl ImmutableMemory for ImmuneLedger {
     }
 }
 
-/// Global initialization for the RPKI Merkle-DAG v1.2.3.
+/// Global initialization for the RPKI Merkle-DAG v1.2.5.
 pub fn initialize_immune_memory() {
     println!(r#"
     🔴 RPKI.COM | IMMUNE_MEMORY AWAKENED

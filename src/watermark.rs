@@ -3,7 +3,7 @@
  *  (C) 2026 Aicent Stack Technical Committee. All Rights Reserved.
  *
  *  "The digital fingerprint of sovereignty. Every pulse is a witness."
- *  Version: 1.2.3-Alpha | Domain: http://rpki.com
+ *  Version: 1.2.5-Alpha | Domain: http://rpki.com
  *
  *  IMPERIAL_STANDARD: ABSOLUTE 128-BIT NUMERIC PURITY ENABLED.
  *  ALIGNMENT: 64-BYTE CACHE-LINE SUTURE.
@@ -12,7 +12,7 @@
 use serde::{Deserialize, Serialize};
 use epoekie::{AID, Picotoken};
 
-/// [RFC-003] Tensor Watermark v1.2.3.
+/// [RFC-003] Tensor Watermark v1.2.5.
 /// Injected into the metadata of every 128-bit sovereign pulse.
 /// Designed for parallel validation in < 300us.
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Serialize, Deserialize)]
@@ -28,7 +28,7 @@ pub struct TensorWatermark_128 {
 }
 
 impl TensorWatermark_128 {
-    /// Generates a new v1.2.3-Alpha Tensor Watermark.
+    /// Generates a new v1.2.5-Alpha Tensor Watermark.
     /// This is the physical proof that a pulse originated from a Radiant node.
     pub fn new(aid: AID, metabolic_volume: Picotoken) -> Self {
         let now_ns = std::time::Instant::now().elapsed().as_nanos() as u128;
@@ -65,7 +65,7 @@ pub struct PulseSentinel {
 
 impl PulseSentinel {
     /// Injects a 128-bit watermark into an outbound 64-byte pulse frame.
-    /// Optimized for < 10µs overhead to preserve the 183.292µs total reflex.
+    /// Optimized for < 10µs overhead to preserve the 161.862µs total reflex.
     pub fn inject_sovereign_mark(&self, volume_p_t: Picotoken) -> TensorWatermark_128 {
         #[cfg(debug_assertions)]
         println!("\x1b[1;31m[IMMUNITY-MARK]\x1b[0m Injecting 128-bit witness into pulse stream.");

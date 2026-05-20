@@ -3,7 +3,7 @@
  *  (C) 2026 Aicent Stack Technical Committee. All Rights Reserved.
  *
  *  "The mathematical shield of the Empire. Logic folding at 12ns precision."
- *  Version: 1.2.3-Alpha | Domain: http://rpki.com
+ *  Version: 1.2.5-Alpha | Domain: http://rpki.com
  *
  *  IMPERIAL_STANDARD: ABSOLUTE 128-BIT NUMERIC PURITY ENABLED.
  *  SOVEREIGN_GRAVITY_WELL: MANDATORY INDIVISIBILITY PROTOCOL ENABLED.
@@ -13,7 +13,7 @@ use serde::{Deserialize, Serialize};
 use epoekie::{AID, HomeostasisScore};
 use std::time::Instant;
 
-/// [RFC-003] Sovereign Cipher v1.2.3.
+/// [RFC-003] Sovereign Cipher v1.2.5.
 /// Implements 128-bit logic folding for sub-microsecond pulse encryption.
 /// This structure is hardware-aligned to 128-byte dual cache-lines.
 #[repr(C, align(128))]
@@ -95,7 +95,7 @@ impl CryptographicSuture for SovereignCipher_128 {
     }
 }
 
-/// Global initialization for the RPKI Cryptographic Substrate v1.2.3.
+/// Global initialization for the RPKI Cryptographic Substrate v1.2.5.
 pub fn initialize_imperial_crypto() {
     println!(r#"
     🔴 RPKI.COM | CRYPTO-SUBSTRATE AWAKENED

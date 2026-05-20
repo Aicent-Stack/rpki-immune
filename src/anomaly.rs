@@ -3,7 +3,7 @@
  *  (C) 2026 Aicent Stack Technical Committee. All Rights Reserved.
  *
  *  "The immune sensory system. Identifying logical pathogens in the 12ns grid."
- *  Version: 1.2.3-Alpha | Domain: http://rpki.com
+ *  Version: 1.2.5-Alpha | Domain: http://rpki.com
  *
  *  IMPERIAL_STANDARD: ABSOLUTE 128-BIT NUMERIC PURITY ENABLED.
  *  SOVEREIGN_GRAVITY_WELL: MANDATORY INDIVISIBILITY PROTOCOL ENABLED.
@@ -55,7 +55,7 @@ pub struct AnomalySentinel {
 }
 
 impl AnomalySentinel {
-    /// Initializes a new Anomaly Sentinel v1.2.3.
+    /// Initializes a new Anomaly Sentinel v1.2.5.
     pub fn new(aid: AID) -> Self {
         Self {
             local_sentinel_aid: aid,
@@ -68,7 +68,7 @@ impl AnomalySentinel {
 
     /// RFC-003: Detect Substrate Pathogen.
     /// Analyzes node behavior against the 12ns jitter baseline.
-    /// [PERF] Optimized for 183.292us hot-path execution.
+    /// [PERF] Optimized for 161.862us hot-path execution.
     pub fn detect_substrate_pathogen_128(
         &mut self, 
         target: AID, 
@@ -144,7 +144,7 @@ impl ImmuneSensory for AnomalySentinel {
     }
 }
 
-/// Global initialization for the RPKI Anomaly Sensing v1.2.3.
+/// Global initialization for the RPKI Anomaly Sensing v1.2.5.
 pub fn awaken_immune_senses() {
     println!(r#"
     🔴 RPKI.COM | IMMUNE_SENSES AWAKENED (2026)

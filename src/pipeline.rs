@@ -3,7 +3,7 @@
  *  (C) 2026 Aicent Stack Technical Committee. All Rights Reserved.
  *
  *  "The parallel assembly of defense. Auditing 1.2kHz pulse streams."
- *  Version: 1.2.3-Alpha | Domain: http://rpki.com
+ *  Version: 1.2.5-Alpha | Domain: http://rpki.com
  *
  *  IMPERIAL_STANDARD: ABSOLUTE 128-BIT NUMERIC PURITY ENABLED.
  *  SOVEREIGN_GRAVITY_WELL: MANDATORY INDIVISIBILITY PROTOCOL ENABLED.
@@ -42,7 +42,7 @@ pub struct AuditResult_128 {
 
 /// The RPKI Immune Pipeline.
 /// Chains cryptographic unfolding, watermark verification, and anomaly detection.
-/// Designed to sustain the 183.292us reflex arc under 1.2kHz load.
+/// Designed to sustain the 161.862us reflex arc under 1.2kHz load.
 pub struct ImmunePipeline {
     pub local_node_aid: AID,
     pub cipher_manifold: SovereignCipher_128,
@@ -54,10 +54,10 @@ pub struct ImmunePipeline {
 }
 
 impl ImmunePipeline {
-    /// Creates a new Radiant Immune Pipeline instance v1.2.3.
+    /// Creates a new Radiant Immune Pipeline instance v1.2.5.
     pub fn new(node_aid: AID, is_radiant: bool, hs: HomeostasisScore) -> Self {
         // --- GRAVITY WELL AUDIT ---
-        verify_organism!("rpki_immune_pipeline_v123_totality");
+        verify_organism!("rpki_immune_pipeline_v125_totality");
 
         Self {
             local_node_aid: node_aid,
@@ -148,7 +148,7 @@ impl ImmuneOrchestration for ImmunePipeline {
 
     fn report_immune_homeostasis(&self) -> HomeostasisScore {
         HomeostasisScore {
-            reflex_latency_ns: 183_292, 
+            reflex_latency_ns: 161_862, 
             metabolic_efficiency: 0.998,
             entropy_tax_rate: 0.3, 
             cognitive_load_idx: 0.08,
@@ -158,12 +158,12 @@ impl ImmuneOrchestration for ImmunePipeline {
     }
 }
 
-/// Global initialization for the RPKI Immune Pipeline v1.2.3.
+/// Global initialization for the RPKI Immune Pipeline v1.2.5.
 pub fn ignite_immune_pipeline() {
     println!(r#"
     🔴 RPKI.COM | IMMUNE_PIPELINE IGNITED
     --------------------------------------
     MODE: PARALLEL_AUDIT | PRECISION: 128-BIT
-    CAPACITY: 1.2kHz PULSE_STREAM | v1.2.3
+    CAPACITY: 1.2kHz PULSE_STREAM | v1.2.5
     "#);
 }
